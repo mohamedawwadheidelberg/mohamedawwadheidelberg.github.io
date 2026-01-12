@@ -1,5 +1,3 @@
-import { AlertTriangle } from "lucide-react"
-
 interface RUODisclaimerProps {
   variant?: "banner" | "inline" | "footer"
 }
@@ -7,12 +5,9 @@ interface RUODisclaimerProps {
 export function RUODisclaimer({ variant = "inline" }: RUODisclaimerProps) {
   if (variant === "banner") {
     return (
-      <div className="bg-amber-50 border-y border-amber-200 py-2 px-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 text-sm text-amber-900">
-          <AlertTriangle className="w-4 h-4 flex-shrink-0" />
-          <span>
-            <strong>Research Use Only (RUO)</strong> — Products are not intended for diagnostic or therapeutic use.
-          </span>
+      <div className="bg-slate-50 border-b border-slate-200 py-1.5 px-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-center gap-1.5 text-xs text-slate-500">
+          <span>Research Use Only (RUO) — Not intended for diagnostic or therapeutic use</span>
         </div>
       </div>
     )
@@ -20,26 +15,18 @@ export function RUODisclaimer({ variant = "inline" }: RUODisclaimerProps) {
 
   if (variant === "footer") {
     return (
-      <div className="text-xs text-muted-foreground border-t border-border pt-4 mt-4">
-        <p className="flex items-start gap-2">
-          <AlertTriangle className="w-3 h-3 mt-0.5 flex-shrink-0" />
-          <span>
-            <strong>Research Use Only (RUO):</strong> All BlueRay Precision products are intended for research use only
-            and are not for use in diagnostic or therapeutic procedures.
-          </span>
-        </p>
-      </div>
+      <p className="text-xs text-muted-foreground/70 mt-4">
+        Research Use Only (RUO): Products are intended for research use only and are not for use in diagnostic or
+        therapeutic procedures.
+      </p>
     )
   }
 
   return (
-    <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-      <p className="text-sm text-amber-900 flex items-start gap-2">
-        <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" />
-        <span>
-          <strong>Research Use Only (RUO):</strong> This product is intended for research use only and is not for use in
-          diagnostic or therapeutic procedures.
-        </span>
+    <div className="bg-slate-50 border border-slate-200 rounded px-3 py-2">
+      <p className="text-xs text-slate-500">
+        <span className="font-medium">Research Use Only (RUO):</span> This product is intended for research use only and
+        is not for use in diagnostic or therapeutic procedures.
       </p>
     </div>
   )

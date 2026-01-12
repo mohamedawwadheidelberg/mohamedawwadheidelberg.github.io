@@ -31,23 +31,42 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus("idle")
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitStatus("success")
-      // Reset form
-      setFormData({
-        name: "",
-        organization: "",
-        country: "",
-        email: "",
-        phone: "",
-        interest: "",
-        message: "",
-        privacyAccepted: false,
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.organization,
+          subject: `${formData.interest} Inquiry from ${formData.country}`,
+          message: `Phone: ${formData.phone || "Not provided"}\n\n${formData.message}`,
+        }),
       })
-    }, 1500)
+
+      if (response.ok) {
+        setSubmitStatus("success")
+        setFormData({
+          name: "",
+          organization: "",
+          country: "",
+          email: "",
+          phone: "",
+          interest: "",
+          message: "",
+          privacyAccepted: false,
+        })
+      } else {
+        setSubmitStatus("error")
+      }
+    } catch (error) {
+      console.error("Form submission error:", error)
+      setSubmitStatus("error")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -116,6 +135,15 @@ export default function ContactPage() {
                     <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
                       <p className="text-green-800 text-sm">
                         Thank you for your inquiry! We'll get back to you within 1-2 business days.
+                      </p>
+                    </div>
+                  )}
+
+                  {submitStatus === "error" && (
+                    <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                      <p className="text-red-800 text-sm">
+                        There was an error sending your message. Please try again or email us directly at
+                        info@blueray-precision.com
                       </p>
                     </div>
                   )}
