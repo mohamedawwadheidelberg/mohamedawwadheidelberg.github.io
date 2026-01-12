@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { RUODisclaimer } from "@/components/ruo-disclaimer"
 import { Microscope, FlaskConical } from "lucide-react"
 
 type ProductCategory = "all" | "detection" | "reference" | "coming-soon"
@@ -86,12 +87,14 @@ export default function ProductsPage() {
     <div className="min-h-screen">
       <Navigation />
 
+      <RUODisclaimer variant="banner" />
+
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Products</h1>
           <p className="text-xl text-muted-foreground">
-            Comprehensive solutions for standardized CAR T cell detection and monitoring
+            Comprehensive solutions for standardized CAR T cell detection and monitoring in research applications
           </p>
         </div>
       </section>
@@ -160,6 +163,10 @@ export default function ProductsPage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          <div className="mt-12">
+            <RUODisclaimer />
           </div>
         </div>
       </section>

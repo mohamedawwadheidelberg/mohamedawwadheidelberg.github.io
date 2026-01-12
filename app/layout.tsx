@@ -10,20 +10,20 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "BlueRay Precision | CAR T Cell Detection & Flow Cytometry Standardization",
   description:
-    "Precision detection reagents and reference materials for standardized CAR T cell monitoring. Developed in Heidelberg, Germany for diagnostic labs and cell therapy manufacturers.",
+    "Precision detection reagents and reference materials for standardized CAR T cell monitoring. Developed in Heidelberg, Germany for research laboratories and cell therapy manufacturers.",
   keywords: [
     "CAR T cell detection",
     "flow cytometry",
-    "cell therapy diagnostics",
+    "cell therapy research",
     "CD19 detection",
     "BCMA detection",
     "laboratory standardization",
   ],
   generator: "v0.app",
   openGraph: {
-    title: "BlueRay Precision | CAR T Cell Detection Reagents",
+    title: "BlueRay Precision | Advancing Cell Therapy Research",
     description:
-      "Next-generation standardization for cell therapy flow cytometry. Affordable, consistent, globally standardized reagents.",
+      "Next-generation standardization for cell therapy flow cytometry. Affordable, consistent, globally standardized reagents for research use.",
     type: "website",
     locale: "en_US",
   },

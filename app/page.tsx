@@ -222,9 +222,12 @@ export default function HomePage() {
             </div>
           </div>
 
-          <p className="text-sm text-muted-foreground text-center mt-8">
-            Products are for research use unless otherwise stated.
-          </p>
+          <div className="text-center mt-8 p-4 bg-amber-50 border border-amber-200 rounded-lg max-w-2xl mx-auto">
+            <p className="text-sm text-amber-900">
+              <strong>Research Use Only (RUO):</strong> All BlueRay Precision products are intended for research use
+              only and are not for use in diagnostic or therapeutic procedures.
+            </p>
+          </div>
         </div>
       </section>
 

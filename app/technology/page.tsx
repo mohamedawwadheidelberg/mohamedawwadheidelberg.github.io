@@ -1,12 +1,15 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
+import { RUODisclaimer } from "@/components/ruo-disclaimer"
 import { Microscope, FlaskConical, CheckCircle2, Shield } from "lucide-react"
 
 export default function TechnologyPage() {
   return (
     <div className="min-h-screen">
       <Navigation />
+
+      <RUODisclaimer variant="banner" />
 
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
@@ -127,7 +130,7 @@ export default function TechnologyPage() {
             <p>
               Regular use of reference materials supports ongoing quality assurance programs and facilitates
               troubleshooting when unexpected results occur. This approach is particularly valuable in multi-center
-              studies and clinical trial settings where data comparability is essential.
+              studies and research settings where data comparability is essential.
             </p>
           </div>
 
@@ -194,6 +197,10 @@ export default function TechnologyPage() {
               </div>
             </CardContent>
           </Card>
+
+          <div className="mt-8">
+            <RUODisclaimer />
+          </div>
         </div>
       </section>
 

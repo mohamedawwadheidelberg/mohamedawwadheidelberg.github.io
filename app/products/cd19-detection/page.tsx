@@ -1,14 +1,18 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { RUODisclaimer } from "@/components/ruo-disclaimer"
 import { CheckCircle2, Microscope, TrendingUp, FlaskConical } from "lucide-react"
 
 export default function CD19DetectionPage() {
   return (
     <div className="min-h-screen">
       <Navigation />
+
+      <RUODisclaimer variant="banner" />
 
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
@@ -27,6 +31,28 @@ export default function CD19DetectionPage() {
         </div>
       </section>
 
+      <section className="py-12 px-4 bg-background">
+        <div className="max-w-4xl mx-auto">
+          <Card className="overflow-hidden">
+            <CardContent className="p-0">
+              <Image
+                src="/images/cd19-detection.jpg"
+                alt="CD19 Detection Reagent binding to CAR receptor on T cell membrane with flow cytometry signal visualization"
+                width={800}
+                height={600}
+                className="w-full h-auto"
+              />
+              <div className="p-4 bg-muted">
+                <p className="text-sm text-muted-foreground text-center">
+                  Schematic representation of the CD19 Detection Reagent binding to the CAR receptor on the T cell
+                  membrane, with flow cytometry signal visualization showing CD19-CAR vs CD3 detection.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Overview Section */}
       <section className="py-16 px-4 bg-background">
         <div className="max-w-4xl mx-auto">
@@ -39,11 +65,13 @@ export default function CD19DetectionPage() {
               different CAR constructs targeting CD19.
             </p>
             <p className="mt-4">
-              Optimized for clinical monitoring workflows, the reagent demonstrates consistent performance across common
+              Optimized for research monitoring workflows, the reagent demonstrates consistent performance across common
               flow cytometry platforms and buffer systems. Its formulation minimizes background staining while
               maintaining high signal intensity for CAR-positive populations.
             </p>
           </div>
+
+          <RUODisclaimer />
         </div>
       </section>
 
@@ -109,7 +137,7 @@ export default function CD19DetectionPage() {
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <FlaskConical className="w-4 h-4 mt-0.5 text-primary flex-shrink-0" />
-                      <span>30 tests per kit (sufficient for typical clinical monitoring)</span>
+                      <span>30 tests per kit (sufficient for typical research monitoring)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <FlaskConical className="w-4 h-4 mt-0.5 text-primary flex-shrink-0" />
@@ -170,8 +198,12 @@ export default function CD19DetectionPage() {
             </Card>
           </div>
 
-          <div className="mt-6 bg-amber-50 border border-amber-200 rounded-lg p-4">
-            <p className="text-sm text-amber-900">
+          <div className="mt-6">
+            <RUODisclaimer />
+          </div>
+
+          <div className="mt-4 bg-muted border border-border rounded-lg p-4">
+            <p className="text-sm text-muted-foreground">
               <strong>Note:</strong> Prices may vary by region, order volume, and shipping requirements. Contact us for
               an official quote tailored to your specific needs. Volume discounts available for multi-kit orders.
             </p>
@@ -227,7 +259,7 @@ export default function CD19DetectionPage() {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Standardize Your CD19 CAR T Monitoring?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Standardize Your CD19 CAR T Research?</h2>
           <p className="text-xl mb-8 text-primary-foreground/90">
             Request a quote or speak with our technical team to discuss your specific requirements.
           </p>

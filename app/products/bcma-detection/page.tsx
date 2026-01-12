@@ -3,12 +3,15 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { RUODisclaimer } from "@/components/ruo-disclaimer"
 import { CheckCircle2, Microscope, TrendingUp, FlaskConical } from "lucide-react"
 
 export default function BCMADetectionPage() {
   return (
     <div className="min-h-screen">
       <Navigation />
+
+      <RUODisclaimer variant="banner" />
 
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
@@ -22,7 +25,7 @@ export default function BCMADetectionPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">BCMA Detection Reagent</h1>
           <p className="text-xl text-muted-foreground">
             Specialized detection reagent for BCMA-targeting CAR T cells, enabling accurate monitoring in multiple
-            myeloma therapeutic applications.
+            myeloma research applications.
           </p>
         </div>
       </section>
@@ -34,15 +37,17 @@ export default function BCMADetectionPage() {
           <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
             <p>
               The SCOPE BCMA Detection Reagent provides specific recognition of B-cell maturation antigen
-              (BCMA)-targeting CAR T cells. Designed for multiple myeloma treatment monitoring, this reagent enables
+              (BCMA)-targeting CAR T cells. Designed for multiple myeloma research monitoring, this reagent enables
               quantification of CAR-modified cells throughout the manufacturing process and post-infusion follow-up.
             </p>
             <p className="mt-4">
               Optimized to work with diverse BCMA CAR constructs, the reagent maintains consistent performance
               characteristics across different design architectures. The formulation balances sensitivity and
-              specificity to enable detection across the clinically relevant concentration range.
+              specificity to enable detection across the research-relevant concentration range.
             </p>
           </div>
+
+          <RUODisclaimer />
         </div>
       </section>
 
@@ -127,7 +132,7 @@ export default function BCMADetectionPage() {
 
                 <div className="bg-muted rounded-lg p-6">
                   <p className="text-sm text-muted-foreground mb-4">
-                    Larger kit sizes available for manufacturing QC and high-volume clinical applications. Contact us to
+                    Larger kit sizes available for manufacturing QC and high-volume research applications. Contact us to
                     discuss custom configurations.
                   </p>
                   <Link href="/contact">
@@ -169,8 +174,12 @@ export default function BCMADetectionPage() {
             </Card>
           </div>
 
-          <div className="mt-6 bg-amber-50 border border-amber-200 rounded-lg p-4">
-            <p className="text-sm text-amber-900">
+          <div className="mt-6">
+            <RUODisclaimer />
+          </div>
+
+          <div className="mt-4 bg-background border border-border rounded-lg p-4">
+            <p className="text-sm text-muted-foreground">
               <strong>Note:</strong> Prices may vary by region and order volume. For multi-site studies or manufacturing
               applications requiring multiple kits, please request a custom quote. Volume discounts and subscription
               models available.
@@ -227,7 +236,7 @@ export default function BCMADetectionPage() {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Get Started with BCMA CAR T Monitoring</h2>
+          <h2 className="text-3xl font-bold mb-4">Get Started with BCMA CAR T Research</h2>
           <p className="text-xl mb-8 text-primary-foreground/90">
             Contact our team to request a quote or discuss technical specifications for your application.
           </p>

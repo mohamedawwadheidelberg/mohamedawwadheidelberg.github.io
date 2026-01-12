@@ -154,8 +154,8 @@ export default function AboutPage() {
                     </p>
                     <p>
                       <strong className="text-foreground">Email:</strong>{" "}
-                      <a href="mailto:info@blu-ray-precision.com" className="text-primary hover:underline">
-                        info@blu-ray-precision.com
+                      <a href="mailto:info@blueray-precision.com" className="text-primary hover:underline">
+                        info@blueray-precision.com
                       </a>
                     </p>
                   </div>

@@ -3,12 +3,15 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { RUODisclaimer } from "@/components/ruo-disclaimer"
 import { FlaskConical, Target, CheckCircle2, TrendingUp } from "lucide-react"
 
 export default function ReferenceCellsPage() {
   return (
     <div className="min-h-screen">
       <Navigation />
+
+      <RUODisclaimer variant="banner" />
 
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
@@ -41,9 +44,11 @@ export default function ReferenceCellsPage() {
               By incorporating reference cells into routine quality control workflows, laboratories can monitor
               instrument performance over time, troubleshoot unexpected results, and ensure that data generated at
               different sites or time points remains comparable. This systematic approach to standardization is
-              particularly valuable in multi-center clinical trials and distributed manufacturing settings.
+              particularly valuable in multi-center research studies and distributed manufacturing settings.
             </p>
           </div>
+
+          <RUODisclaimer />
         </div>
       </section>
 
@@ -118,8 +123,8 @@ export default function ReferenceCellsPage() {
               <CardContent className="pt-6">
                 <h3 className="text-xl font-semibold mb-3">Staining Control</h3>
                 <p className="text-muted-foreground">
-                  Include reference cells alongside patient samples to verify that staining procedures are performing as
-                  expected. Deviations from established reference values can indicate reagent degradation, protocol
+                  Include reference cells alongside research samples to verify that staining procedures are performing
+                  as expected. Deviations from established reference values can indicate reagent degradation, protocol
                   drift, or instrument issues.
                 </p>
               </CardContent>
@@ -130,8 +135,8 @@ export default function ReferenceCellsPage() {
                 <h3 className="text-xl font-semibold mb-3">Inter-Laboratory Comparability</h3>
                 <p className="text-muted-foreground">
                   Enable meaningful comparison of results across different laboratories by normalizing to common
-                  reference materials. Particularly valuable in multi-center clinical trials where data harmonization is
-                  critical for valid statistical analysis.
+                  reference materials. Particularly valuable in multi-center research studies where data harmonization
+                  is critical for valid statistical analysis.
                 </p>
               </CardContent>
             </Card>
@@ -203,7 +208,8 @@ export default function ReferenceCellsPage() {
               </div>
 
               <div className="mt-6 pt-6 border-t border-border">
-                <p className="text-sm text-muted-foreground mb-4">
+                <RUODisclaimer variant="footer" />
+                <p className="text-sm text-muted-foreground mt-4 mb-4">
                   Contact our technical team to discuss which format best suits your quality control and standardization
                   objectives.
                 </p>

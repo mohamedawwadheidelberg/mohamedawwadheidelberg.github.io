@@ -3,18 +3,19 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { RUODisclaimer } from "@/components/ruo-disclaimer"
 import { Activity, Building2, Users, Beaker } from "lucide-react"
 
 export default function ApplicationsPage() {
   const applications = [
     {
       icon: Activity,
-      title: "Clinical Monitoring Support Workflows",
+      title: "Monitoring Support Workflows",
       description:
-        "Support laboratory workflows for monitoring CAR T cell persistence and phenotype throughout patient treatment courses. Enable consistent detection across serial time points to track therapeutic dynamics.",
+        "Support laboratory workflows for monitoring CAR T cell persistence and phenotype throughout research studies. Enable consistent detection across serial time points to track therapeutic dynamics.",
       benefits: [
-        "Standardized detection across patient monitoring visits",
-        "Comparable results supporting clinical decision workflows",
+        "Standardized detection across monitoring visits",
+        "Comparable results supporting research workflows",
         "Reduced variability in longitudinal tracking",
       ],
     },
@@ -33,7 +34,7 @@ export default function ApplicationsPage() {
       icon: Users,
       title: "Multicenter Study Standardization",
       description:
-        "Support data harmonization in multi-site clinical trials and translational research studies. Reference materials enable normalization across different laboratories and instrument platforms.",
+        "Support data harmonization in multi-site research and translational studies. Reference materials enable normalization across different laboratories and instrument platforms.",
       benefits: [
         "Inter-laboratory result comparability",
         "Reduced site-to-site variability",
@@ -57,13 +58,15 @@ export default function ApplicationsPage() {
     <div className="min-h-screen">
       <Navigation />
 
+      <RUODisclaimer variant="banner" />
+
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Applications</h1>
           <p className="text-xl text-muted-foreground">
             SCOPE reagents and reference materials support diverse CAR T cell detection workflows across research,
-            development, and clinical settings
+            development, and manufacturing settings
           </p>
         </div>
       </section>
@@ -116,8 +119,8 @@ export default function ApplicationsPage() {
           <h2 className="text-3xl font-bold mb-6">Seamless Workflow Integration</h2>
           <p className="text-lg text-muted-foreground mb-8">
             SCOPE products are designed to integrate smoothly with existing flow cytometry protocols. Whether you're
-            running clinical monitoring assays, manufacturing QC tests, or translational research studies, our reagents
-            work with your established procedures.
+            running monitoring assays, manufacturing QC tests, or translational research studies, our reagents work with
+            your established procedures.
           </p>
 
           <Card>
@@ -141,16 +144,17 @@ export default function ApplicationsPage() {
         </div>
       </section>
 
-      {/* RUO Disclaimer Section */}
+      {/* RUO Disclaimer Section - Enhanced */}
       <section className="py-16 px-4 bg-background">
         <div className="max-w-4xl mx-auto">
-          <Card className="bg-amber-50 border-amber-200">
+          <RUODisclaimer />
+          <Card className="mt-6 bg-muted">
             <CardContent className="pt-6">
               <h3 className="font-semibold mb-2">Important Notice</h3>
               <p className="text-sm text-muted-foreground">
-                SCOPE products are intended for research use unless otherwise stated. They are designed to support
-                laboratory workflows and research applications. For questions regarding specific use cases or regulatory
-                considerations, please contact our team.
+                All SCOPE products are intended for research use only (RUO). They are designed to support laboratory
+                workflows and research applications. Products are not intended for use in diagnostic or therapeutic
+                procedures. For questions regarding specific use cases, please contact our team.
               </p>
             </CardContent>
           </Card>
