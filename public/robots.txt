@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blu-ray-precision.com/sitemap.xml
